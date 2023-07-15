@@ -1,5 +1,5 @@
 import { GraphQLClient } from 'graphql-request';
-import { API_URL, API_TOKEN } from '$env/static/private';
+import { API_URL } from '$env/static/private';
 
 export const prerender = true;
 /**
