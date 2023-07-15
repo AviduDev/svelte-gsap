@@ -1,12 +1,8 @@
 import { GraphQLClient } from 'graphql-request';
-import { API_URL, API_TOKEN } from '$env/static/private';
+
 
 export const load = async () => {
-	const hygraph = new GraphQLClient(API_URL, {
-		headers: {
-			Authorization: `Bearer ${API_TOKEN}`
-		}
-	});
+	const hygraph = new GraphQLClient("https://api-eu-central-1-shared-euc1-02.hygraph.com/v2/clk3pjccw0ng601ur9b1x1xzr/master");
 
 	const { products } = await hygraph.request(
 		`query MyQuery {

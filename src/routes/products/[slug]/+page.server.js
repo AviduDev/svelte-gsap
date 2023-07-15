@@ -8,7 +8,7 @@ export const prerender = true;
 
 export const load = async ({ params }) => {
 	const { slug } = params;
-	const hygraph = new GraphQLClient(API_URL);
+	const hygraph = new GraphQLClient("https://api-eu-central-1-shared-euc1-02.hygraph.com/v2/clk3pjccw0ng601ur9b1x1xzr/master");
 
 	const { product } = await hygraph.request(
 		`query MyQuery($slug: String!) {
