@@ -1,5 +1,5 @@
 <script>
-	import { gsap } from '../lib/gsap';
+	import { gsap, Flip } from '../lib/gsap';
 	import { onMount } from 'svelte';
 
 	onMount(() => {
@@ -30,21 +30,9 @@
 </main>
 
 <style>
-	* {
-		font-family: Arial;
-		text-transform: uppercase;
-	}
-	img {
-		max-width: 100%;
-	}
 
 	ul {
 		padding: 0;
-	}
-
-	a {
-		text-decoration: none;
-		color: inherit;
 	}
 
 	ul {

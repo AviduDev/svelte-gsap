@@ -1,16 +1,23 @@
 <script>
 	import { onMount } from 'svelte';
-	import { gsap } from "../../../lib/gsap.js";
+	import { gsap } from '../../../lib/gsap.js';
 
 	onMount(() => {
-		gsap.from('.projectImage', { xPercent: -50 });
+		gsap.from('.projectImage', {
+			scale: 1.3,
+			yPercent: -30,
+			duration: 1.5,
+			ease: 'power4',
+		});
 	});
 	export let data;
 </script>
 
 <main>
 	<div class="header">
-		<img class="projectImage" src={data.project.mainImage.url} alt={data.project.title} />
+		<div class="imageWrapper">
+			<img class="projectImage" src={data.project.mainImage.url} alt={data.project.title} />
+		</div>
 		<h1>{data.project.title}</h1>
 	</div>
 	<div class="productDetails">
@@ -40,26 +47,17 @@
 		margin-top: 50vh;
 	}
 
-	* {
-		font-family: Arial;
-		text-transform: uppercase;
-	}
-	img {
-		max-width: 100%;
-	}
-
 	ul {
 		padding: 0;
 		list-style: none;
 	}
 
-	a {
-		text-decoration: none;
-		color: inherit;
-	}
-
 	.productDescription {
 		max-width: 40vw;
+	}
+
+	.imageWrapper {
+		overflow: hidden;
 	}
 
 	.imageGallery {

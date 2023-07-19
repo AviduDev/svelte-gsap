@@ -1,11 +1,10 @@
 import { gsap } from 'gsap/dist/gsap';
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger.js';
-import { MotionPathPlugin } from 'gsap/dist/MotionPathPlugin.js';
+import { Flip } from 'gsap/dist/Flip'
 
 
 if (typeof window !== "undefined") {
-  gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
+  gsap.registerPlugin(Flip);
 }
 
 export * from "gsap";
-export { MotionPathPlugin, ScrollTrigger };
+export { Flip };
