@@ -5,5 +5,5 @@
 </script>
 
 <main>
-	<h1>{data.products.title}</h1>
+	<h1>{data.projects.title}</h1>
 </main>

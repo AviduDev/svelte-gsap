@@ -10,9 +10,9 @@ export const load = async ({ params }) => {
 	const { slug } = params;
 	const hygraph = new GraphQLClient("https://api-eu-central-1-shared-euc1-02.hygraph.com/v2/clk3pjccw0ng601ur9b1x1xzr/master");
 
-	const { product } = await hygraph.request(
+	const { project } = await hygraph.request(
 		`query MyQuery($slug: String!) {
-            product(where: {slug: $slug}) {
+            project(where: {slug: $slug}) {
                 title
                 slug
 				description
@@ -30,6 +30,6 @@ export const load = async ({ params }) => {
 	);
 
 	return {
-		product
+		project
 	};
 };
